@@ -736,10 +736,9 @@ public class CyclicNumberAxis extends NumberAxis {
 
         if (isInverted()) {
             double jbreak = jmax - (vmax - vp) * (jmax - jmin) / this.period;
-            if (java2DValue >= jbreak) {
-                if (jmax-jmin>0)
+            if (java2DValue >= jbreak && jmax-jmin>0) {
                 {
-                return vp + (jmax - java2DValue) * this.period / (jmax - jmin);
+                  return vp + (jmax - java2DValue) * this.period / (jmax - jmin);
                  }
             }
             else {
