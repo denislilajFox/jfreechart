@@ -747,10 +747,10 @@ public class CyclicNumberAxis extends NumberAxis {
         }
         else {
             double jbreak = (vmax - vp) * (jmax - jmin) / this.period + jmin;
-            if (java2DValue <= jbreak) {
+            if (java2DValue <= jbreak && jmax-jmin>0) {
                 return vp + (java2DValue - jmin) * this.period / (jmax - jmin);
             }
-            else {
+            else  if (java2DValue >= jbreak && jmax-jmin>0) {{
                 return vp - (jmax - java2DValue) * this.period / (jmax - jmin);
             }
         }
