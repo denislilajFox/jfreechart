@@ -2031,7 +2031,7 @@ public abstract class ChartFactory {
      */
     public static JFreeChart createWaferMapChart(String title,
             WaferMapDataset dataset, PlotOrientation orientation,
-            boolean legend, boolean tooltips, boolean urls) {
+            boolean legend) {
 
         Args.nullNotPermitted(orientation, "orientation");
         WaferMapPlot plot = new WaferMapPlot(dataset);
